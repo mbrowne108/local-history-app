@@ -7,9 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Visit.delete_all
-User.delete_all
 Site.delete_all
 Category.delete_all
+User.delete_all
 
 puts "Seeding categories..."
 architecture = Category.create(name: "Architecture")
@@ -19,9 +19,9 @@ food_drink = Category.create(name: "Food/Drink")
 nature = Category.create(name: "Nature")
 
 puts "Seeding users..."
-matt = User.create(username: "Matt")
-mike = User.create(username: "Mike")
-ann = User.create(username: "Ann")
+matt = User.create(username: "Matt", password: "123")
+mike = User.create(username: "Mike", password: "123")
+ann = User.create(username: "Ann", password: "123")
 
 puts "Seeding sites..."
 petes_tavern = Site.create(name: "Pete's Tavern", lat: 40.73653, long: -73.986746, description: "Tavern built in 1829 at 129 East 18th Street")

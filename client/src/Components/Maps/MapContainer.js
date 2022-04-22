@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-function App() {
+function MapContainer() {
   const googleMapsApiKey = "AIzaSyBiGVkMTXLnxYrreoA5KYD32EVlC1twz0w"
   const containerStyle = {
     width: '640px',
@@ -14,7 +14,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="container text-center">
       <LoadScript googleMapsApiKey={googleMapsApiKey}>
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
           <Marker
@@ -23,9 +23,8 @@ function App() {
           />
         </GoogleMap>
       </LoadScript>
-      
     </div>
   );
 }
 
-export default App;
+export default MapContainer;
